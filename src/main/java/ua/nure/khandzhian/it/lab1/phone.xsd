@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- XML schema -->
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://nure.ua/khandzhian/ITLB1"
+            xmlns:tns="http://nure.ua/khandzhian/ITLB1">
+
+    <xsd:element name="Phones">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="Phone" type="tns:Phone" maxOccurs="unbounded" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:complexType name="Phone">
+        <xsd:sequence>
+            <xsd:element name="PhoneIndex" type="tns:PhoneIndex" minOccurs="1" maxOccurs="1"/>
+            <xsd:element name="Model" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+            <xsd:element name="Parameters" type="tns:Parameters" minOccurs="1" maxOccurs="1"/>
+            <xsd:element name="Price" type="tns:Price" minOccurs="1" maxOccurs="1"/>
+            <xsd:element name="Description" type="tns:Description" minOccurs="0" maxOccurs="2"/>
+            <xsd:element name="SpecialFunction" type="tns:SpecialFunction" minOccurs="1" maxOccurs="1"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:simpleType name="PhoneIndex">
+        <xsd:restriction base="xsd:string">
+            <xsd:length value="8"/>
+            <xsd:pattern value="[a-zA-Z]{4}[0-9]{4}"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:complexType name="Parameters">
+        <xsd:all>
+            <xsd:element name="Diagonal" type="xsd:float"/>
+            <xsd:element name="NumberOfCamera" type="xsd:integer"/>
+            <xsd:element name="BatteryCapacity" type="tns:BatteryCapacity"/>
+        </xsd:all>
+    </xsd:complexType>
+
+    <xsd:complexType name="BatteryCapacity">
+        <xsd:simpleContent>
+            <xsd:extension base="tns:CapacityValue">
+                <xsd:attribute name="capacity" type="tns:Capacity" default="Amper"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+
+    <xsd:simpleType name="Capacity">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="Amper"/>
+            <xsd:enumeration value="mAmper"/>
+            <xsd:enumeration value="kAmper"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="CapacityValue">
+        <xsd:restriction base="xsd:decimal">
+            <xsd:minExclusive value="0.00" />
+            <xsd:maxExclusive value="10000.00"/>
+            <xsd:totalDigits value="4"/>
+            <xsd:fractionDigits value="2" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:complexType name="Price">
+        <xsd:simpleContent>
+            <xsd:extension base="tns:Money">
+                <xsd:attribute name="currency" type="tns:Currency" use="required"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+
+    <xsd:simpleType name="Money">
+        <xsd:restriction base="xsd:decimal">
+            <xsd:minInclusive value="0.00" />
+            <xsd:maxInclusive value="100000.00"/>
+            <xsd:totalDigits value="5"/>
+            <xsd:fractionDigits value="2" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="Currency">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="UAH"/>
+            <xsd:enumeration value="USD"/>
+            <xsd:enumeration value="EUR"/>
+            <xsd:enumeration value="RUB"/>
+            <xsd:enumeration value="PLN"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="Description">
+        <xsd:restriction base="xsd:string">
+            <xsd:minLength value="10"/>
+            <xsd:maxLength value="1000"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:complexType name="SpecialFunction">
+       <xsd:choice>
+           <xsd:element name="SpecialFunction1"/>
+           <xsd:element name="SpecialFunction2"/>
+           <xsd:element name="SpecialFunction3"/>
+       </xsd:choice>
+    </xsd:complexType>
+
+</xsd:schema>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" version="1.0" href="phone.xsl" ?>
+<!--  Input XML document. This XML is valid against phone.xsd XML schema-->
+
+<ITLB1:Phones xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xmlns:ITLB1="http://nure.ua/khandzhian/ITLB1"
+               xsi:schemaLocation="http://nure.ua/khandzhian/ITLB1 phone.xsd">
+
+    <Phone>
+        <PhoneIndex>THNL1258</PhoneIndex>
+        <Model>Samsung Galaxy M31s</Model>
+        <Parameters>
+            <Diagonal>6.5</Diagonal>
+            <NumberOfCamera>4</NumberOfCamera>
+            <BatteryCapacity capacity="kAmper">6000</BatteryCapacity>
+        </Parameters>
+        <Price currency="UAH">5000.00</Price>
+        <Description>Description of this phone.</Description>
+        <SpecialFunction>
+            <SpecialFunction2>Special function 2</SpecialFunction2>
+        </SpecialFunction>
+    </Phone>
+
+    <Phone>
+        <PhoneIndex>ADRE1258</PhoneIndex>
+        <Model>Xiaomi Redmi Note 9</Model>
+        <Parameters>
+            <Diagonal>6.9</Diagonal>
+            <NumberOfCamera>3</NumberOfCamera>
+            <BatteryCapacity capacity="Amper">5000</BatteryCapacity>
+        </Parameters>
+        <Price currency="EUR">400.00</Price>
+        <Description>Description of this phone.</Description>
+        <SpecialFunction>
+            <SpecialFunction3>Special function 3</SpecialFunction3>
+        </SpecialFunction>
+    </Phone>
+
+    <Phone>
+        <PhoneIndex>ASDE1785</PhoneIndex>
+        <Model>Apple iPhone SE</Model>
+        <Parameters>
+            <Diagonal>4.7</Diagonal>
+            <NumberOfCamera>2</NumberOfCamera>
+            <BatteryCapacity capacity="mAmper">7000</BatteryCapacity>
+        </Parameters>
+        <Price currency="PLN">1740.00</Price>
+        <Description>Description of this phone.</Description>
+        <SpecialFunction>
+            <SpecialFunction1>Special function 1</SpecialFunction1>
+        </SpecialFunction>
+    </Phone>
+
+</ITLB1:Phones>
