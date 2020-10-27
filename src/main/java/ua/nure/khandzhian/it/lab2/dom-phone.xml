@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Phones>
+    <Phone>
+        <PhoneIndex>THNL1258</PhoneIndex>
+        <Model>THNL1258</Model>
+        <Parameters>
+            <Diagonal>6.5</Diagonal>
+            <NumberOfCamera>4</NumberOfCamera>
+            <BatteryCapacity capacity="kAmper">6000.0</BatteryCapacity>
+        </Parameters>
+        <Price currency="UAH">5000.0</Price>
+        <Description>[Description of this phone.]</Description>
+        <SpecialFunction>
+            <SpecialFunction2>Special function 2</SpecialFunction2>
+        </SpecialFunction>
+    </Phone>
+    <Phone>
+        <PhoneIndex>ADRE1258</PhoneIndex>
+        <Model>ADRE1258</Model>
+        <Parameters>
+            <Diagonal>6.9</Diagonal>
+            <NumberOfCamera>3</NumberOfCamera>
+            <BatteryCapacity capacity="Amper">5000.0</BatteryCapacity>
+        </Parameters>
+        <Price currency="EUR">400.0</Price>
+        <Description>[Description of this phone.]</Description>
+        <SpecialFunction>
+            <SpecialFunction3>Special function 3</SpecialFunction3>
+        </SpecialFunction>
+    </Phone>
+    <Phone>
+        <PhoneIndex>ASDE1785</PhoneIndex>
+        <Model>ASDE1785</Model>
+        <Parameters>
+            <Diagonal>4.7</Diagonal>
+            <NumberOfCamera>2</NumberOfCamera>
+            <BatteryCapacity capacity="mAmper">7000.0</BatteryCapacity>
+        </Parameters>
+        <Price currency="PLN">1740.0</Price>
+        <Description>[Description of this phone.]</Description>
+        <SpecialFunction>
+            <SpecialFunction1>Special function 1</SpecialFunction1>
+        </SpecialFunction>
+    </Phone>
+</Phones>
