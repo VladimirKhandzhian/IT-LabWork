@@ -23,12 +23,13 @@ public class Constant {
 
     public static final String PATH_TO_XML = "src/main/java/ua/nure/khandzhian/it/lab1/phone.xml";
     public static final String PATH_TO_XSD = "src/main/java/ua/nure/khandzhian/it/lab1/phone.xsd";
+    public static final String PATH_TO_XSL = "src/main/java/ua/nure/khandzhian/it/lab1/phone.xsl";
 
-    public static final String DOM_XML = "src/main/java/ua/nure/khandzhian/it/lab2/dom-phone.xml";
-    public static final String SAX_XML = "src/main/java/ua/nure/khandzhian/it/lab2/sax-phone.xml";
-    public static final String STAX_XML = "src/main/java/ua/nure/khandzhian/it/lab2/stax-phone.xml";
-    public static final String STAX2_XML = "src/main/java/ua/nure/khandzhian/it/lab2/stax2-phone.xml";
-    public static final String JAXB_XML = "src/main/java/ua/nure/khandzhian/it/lab2/jaxb-phone.xml";
+    public static final String DOM_XML = "src/main/java/ua/nure/khandzhian/it/lab2/result/dom-phone.xml";
+    public static final String SAX_XML = "src/main/java/ua/nure/khandzhian/it/lab2/result/sax-phone.xml";
+    public static final String STAX_XML = "src/main/java/ua/nure/khandzhian/it/lab2/result/stax-phone.xml";
+    public static final String STAX2_XML = "src/main/java/ua/nure/khandzhian/it/lab2/result/stax2-phone.xml";
+    public static final String JAXB_XML = "src/main/java/ua/nure/khandzhian/it/lab2/result/jaxb-phone.xml";
 
     public static final String PATH_TO_INVALID_XML = "src/main/java/ua/nure/khandzhian/it/lab1/invalid-phone.xml";
 }
